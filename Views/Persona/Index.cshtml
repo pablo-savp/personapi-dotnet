@@ -1,0 +1,30 @@
+﻿@model List<personapi_dotnet.Models.Entities.Persona>
+
+   <h1>Personas</h1>
+
+
+   <p>
+       <a asp-action="Create">Crear</a>
+   </p>
+
+   <table class="table">
+       <thead>
+           <tr>
+
+               <th>Nombre</th>
+           </tr>
+       </thead>
+
+       <tbody>
+           @foreach(var persona in Model){
+               <tr>
+
+                <td>@Html.DisplayFor(m=>persona.Nombre)</td>
+                <td>@Html.DisplayFor(m=>persona.Apellido)</td>
+                <td>@Html.DisplayFor(m=>persona.Genero)</td>
+                <td>@Html.DisplayFor(m=>persona.Edad)</td>
+                <td>@Html.DisplayFor(m=>persona.Cc)</td>
+               </tr>
+           }
+       </tbody>
+   </table>

@@ -1,0 +1,25 @@
+﻿@model List<personapi_dotnet.Models.Entities.Telefono>
+
+<h1>Profesiones</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>Nombre</th>
+            <th>telefono</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var telefono in Model)
+        {
+            <tr>
+
+                <td>@Html.DisplayFor(m=>telefono.Num)</td>
+                <td>@Html.DisplayFor(m=>telefono.Duenio)</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
